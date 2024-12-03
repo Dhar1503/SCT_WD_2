@@ -24,7 +24,7 @@ startButton.addEventListener("click", () => {
             updateTimeDisplay();
         }, 10);
     } else {
-        recordLap();  // Record lap when button is clicked after the stopwatch has started
+        recordLap();  
     }
 });
 
@@ -61,11 +61,10 @@ function updateTimeDisplay() {
 }
 
 function recordLap() {
-    // Calculate lap time as the difference between the current elapsed time and lap start time
     let lapTime = elapsedTime - lapStartTime;
-    laps.push(lapTime); // Push lap time to the laps array
-    lapStartTime = elapsedTime; // Update lap start time to current elapsed time
-    renderLaps(); // Render updated lap times
+    laps.push(lapTime); 
+    lapStartTime = elapsedTime; 
+    renderLaps(); 
 }
 
 function renderLaps() {
